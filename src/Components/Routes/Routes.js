@@ -5,6 +5,7 @@ import Blog from '../Blog/Blog'
 import Course from '../Course/Course'
 import Register from "../Register/Register";
 import Faq from "../Faq/Faq";
+import { FaAngry } from "react-icons/fa";
 
 
 export const routes = createBrowserRouter([
@@ -36,7 +37,19 @@ export const routes = createBrowserRouter([
                 path: '/register',
                 element: <Register></Register>
 
+            },
+            {
+                path: '*',
+                element:
+                    <div className="text-warning d-flex justify-content-center">
+                        <div>
+                            <h1>NO data Available</h1>
+                            <FaAngry className="text-danger fs-1"></FaAngry>
+                            <p>404</p>
+                        </div>
+                    </div>
             }
+
 
         ]
     }
