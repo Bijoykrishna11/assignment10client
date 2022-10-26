@@ -3,13 +3,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { FaCogs } from "react-icons/fa";
 
 
 const Header = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <div>  <Navbar.Brand href="#home">ROBOTICS & AI</Navbar.Brand></div>
+
+                <div>  <Navbar.Brand href="#home"><FaCogs ></FaCogs> ROBOTICS & AI</Navbar.Brand></div>
 
                 <div><Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto ">

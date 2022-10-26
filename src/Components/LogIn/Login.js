@@ -3,6 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Register from '../Register/Register';
 import { Link } from 'react-router-dom';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 const Login = () => {
 
@@ -35,6 +38,14 @@ const Login = () => {
                 </Button>
                 <Link className='text-decoration-none d-block' to="/register">If you did not sign in, Register now?</Link>
             </Form>
+            <div className='ms-5 mt-5'>
+
+                <ButtonGroup vertical>
+                    <Button className='mb-3'>Sign In With google</Button>
+                    <Button>Sign In With Github</Button>
+                </ButtonGroup>
+            </div>
+
         </div>
     );
 };
