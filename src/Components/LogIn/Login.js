@@ -1,13 +1,29 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Register from '../Register/Register';
 import { Link } from 'react-router-dom';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import { FaGithub, FaGoogle } from "react-icons/fa";
+import app from '../../firebase/firebase.config';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+
+
+const auth = getAuth(app);
+
 
 const Login = () => {
+    const provider = new GoogleAuthProvider();
+    const handleGoogleSignIn = () => {
+
+        signInWithPopup(auth, provider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => {
+                console.log('error:', error);
+            })
+    }
 
     const handesubmit = event => {
         event.preventDefault();
@@ -41,8 +57,8 @@ const Login = () => {
             <div className='ms-5 mt-5'>
 
                 <ButtonGroup vertical>
-                    <Button className='mb-3'>Sign In With google</Button>
-                    <Button>Sign In With Github</Button>
+                    <Button onClick={handleGoogleSignIn} className='mb-3'> <FaGoogle></FaGoogle> Sign In With google</Button>
+                    <Button><FaGithub></FaGithub> Sign In With Github</Button>
                 </ButtonGroup>
             </div>
 
