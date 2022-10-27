@@ -6,6 +6,7 @@ import Course from '../Course/Course'
 import Register from "../Register/Register";
 import Faq from "../Faq/Faq";
 import { FaAngry } from "react-icons/fa";
+import Theme from "../Theme/Theme";
 
 
 export const routes = createBrowserRouter([
@@ -41,6 +42,11 @@ export const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+
+            },
+            {
+                path: "/theme",
+                element: <Theme></Theme>
 
             },
             {

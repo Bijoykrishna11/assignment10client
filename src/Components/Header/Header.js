@@ -19,7 +19,7 @@ const Header = () => {
                         <Link className='pe-3 ' to='/course'>Course</Link>
                         <Link className='pe-3' to="/blog">Blog</Link>
                         <Link className='pe-3' to='/login'>Log </Link>
-                        <Link className='pe-3' to="/them">Theme</Link>
+                        <Link className='pe-3' to="/theme">Theme</Link>
                         <Link className='pe-3' to="/faq" >FAQ</Link>
 
                     </Nav>
