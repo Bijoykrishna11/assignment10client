@@ -10,6 +10,9 @@ import { FaAngry } from "react-icons/fa";
 
 export const routes = createBrowserRouter([
     {
+
+        ///////////// router//////////////
+
         path: '/',
         element: <Main></Main>,
         children: [
@@ -25,6 +28,8 @@ export const routes = createBrowserRouter([
                 path: '/faq',
                 element: <Faq></Faq>
             },
+
+            //////////////////data load//////////////////
             {
                 path: '/course',
                 loader: async () => {
