@@ -17,24 +17,28 @@ const Course = () => {
     return (
 
         <div>
-            <Container className='mt-5'>
+            <Container className='mt-5 col-sm-6'>
 
-                <Row >
+                <Row className='' >
                     <Col lg={4} sm={12}>
 
                         <h1 className='mb-5'>abouts all books</h1>
                         {
                             allBooks.map(e => <p key={e.id}>
-                                <Link>{e.title}</Link>
+                                <Link to>{e.title}</Link>
                             </p>)
                         }
 
                     </Col>
                     <Col lg={8} sm={12} >
-                        <h1 className='mb-5'>abouts all books</h1>
+
                         {
                             allBooks.map(e => <p key={e.id}>
-                                <p>{e.title}</p>
+                                <div className="border border-danger " >
+                                    <h1 >{e.title}</h1>
+                                    <img className='h' src={e.img} alt="" />
+                                    <h4>{e.disc}</h4>
+                                </div>
 
 
                             </p>)

@@ -3,16 +3,16 @@ import Button from 'react-bootstrap/Button';
 
 const Theme = () => {
 
-    const [mode, setmode] = useState('Day');
+    const [mode, setmode] = useState('Lignt');
 
     const changeName = () => {
 
         let value = mode;
-        if (value === "Day") {
-            setmode('Nignt')
+        if (value === "Light") {
+            setmode('Dark')
         }
         else {
-            setmode('Day')
+            setmode('Light')
         }
 
 
