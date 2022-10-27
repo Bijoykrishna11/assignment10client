@@ -34,7 +34,7 @@ export const routes = createBrowserRouter([
             //////////////////data load//////////////////
             {
                 path: '/course',
-                loader: async () => {
+                loader: () => {
                     return fetch(`https://assignment-10-server-bay.vercel.app`);
                 },
 
